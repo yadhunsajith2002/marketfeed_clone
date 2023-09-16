@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'package:marketfeed_clone/home_screen/home_screen.dart';
+import 'package:marketfeed_clone/screens/home_screen/home_screen.dart';
 
 class OTPpage extends StatefulWidget {
   OTPpage({super.key});

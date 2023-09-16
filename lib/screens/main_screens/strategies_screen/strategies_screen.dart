@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:marketfeed_clone/colors/colors.dart';
-import 'package:marketfeed_clone/screens/strategies_screen/tradestatuscontainer/trade_status.dart';
+import 'package:marketfeed_clone/screens/main_screens/strategies_screen/tradestatuscontainer/trade_status.dart';
 
 class StrategieScreen extends StatelessWidget {
   const StrategieScreen({super.key});

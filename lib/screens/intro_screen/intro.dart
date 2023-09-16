@@ -1,5 +1,5 @@
 import 'package:intro_slider/intro_slider.dart';
-import 'package:marketfeed_clone/login_page/login_page.dart';
+import 'package:marketfeed_clone/screens/login_page/login_page.dart';
 import 'package:flutter/material.dart';
 
 class IntroScreenDefault extends StatefulWidget {

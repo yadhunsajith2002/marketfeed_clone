@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:marketfeed_clone/bottom_navigation/bottom_navi.dart';
-import 'package:marketfeed_clone/drawer/drawer.dart';
-import 'package:marketfeed_clone/screens/market_screen/market_screen.dart';
-import 'package:marketfeed_clone/screens/read_screen/read_screen.dart';
-import 'package:marketfeed_clone/screens/signal_screen/signal_screen.dart';
-import 'package:marketfeed_clone/screens/strategies_screen/strategies_screen.dart';
+import 'package:marketfeed_clone/screens/home_screen/bottom_navigation/bottom_navi.dart';
+import 'package:marketfeed_clone/screens/home_screen/drawer/drawer.dart';
+import 'package:marketfeed_clone/screens/main_screens/market_screen/market_screen.dart';
+import 'package:marketfeed_clone/screens/main_screens/read_screen/read_screen.dart';
+import 'package:marketfeed_clone/screens/main_screens/signal_screen/signal_screen.dart';
+import 'package:marketfeed_clone/screens/main_screens/strategies_screen/strategies_screen.dart';
 
 class ScreenHome extends StatefulWidget {
   const ScreenHome({super.key});

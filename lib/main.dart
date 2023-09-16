@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:marketfeed_clone/splash_screen/spalsh_screen.dart';
+import 'package:marketfeed_clone/screens/splash_screen/spalsh_screen.dart';
 
 void main() => runApp(const MyApp());
 

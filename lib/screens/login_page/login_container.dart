@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:marketfeed_clone/otp_page/otp_page.dart';
+import 'package:marketfeed_clone/screens/login_page/otp_page/otp_page.dart';
 
 class LoginContainer extends StatefulWidget {
   const LoginContainer({super.key});

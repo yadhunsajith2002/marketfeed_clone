@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:marketfeed_clone/login_page/login_container.dart';
+import 'package:marketfeed_clone/screens/login_page/login_container.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
