@@ -18,14 +18,7 @@ class _IntroScreenDefaultState extends State<IntroScreenDefault> {
 
     listContentConfig.add(
       const ContentConfig(
-        // styleDescription: TextStyle(
-        //     fontSize: 20, fontWeight: FontWeight.w400, color: Colors.black),
-        // title: "MARKETFEED,",
         heightImage: 500,
-        // styleTitle: TextStyle(
-        //     fontSize: 28, fontWeight: FontWeight.w600, color: Colors.black),
-        // description:
-        //     "Allow miles wound place the leave had. To sitting subject no improve studied limited",
         pathImage: "assets/onboarding/boarding2.jpg",
         backgroundColor: Colors.white,
       ),
@@ -33,30 +26,10 @@ class _IntroScreenDefaultState extends State<IntroScreenDefault> {
     listContentConfig.add(
       const ContentConfig(
         heightImage: 500,
-        // styleDescription: TextStyle(
-        //     fontSize: 20, fontWeight: FontWeight.w400, color: Colors.black),
-        // title: "MARKETFEED,",
-        // styleTitle: TextStyle(
-        //     fontSize: 28, fontWeight: FontWeight.w600, color: Colors.black),
-        // description:
-        //     "Allow miles wound place the leave had. To sitting subject no improve studied limited",
         pathImage: "assets/onboarding/boarding.jpg",
         backgroundColor: Colors.white,
       ),
     );
-    // listContentConfig.add(
-    //   const ContentConfig(
-    //     styleDescription: TextStyle(
-    //         fontSize: 20, fontWeight: FontWeight.w400, color: Colors.black),
-    //     title: "MARKETFEED,",
-    //     styleTitle: TextStyle(
-    //         fontSize: 28, fontWeight: FontWeight.w600, color: Colors.black),
-    //     description:
-    //         "Allow miles wound place the leave had. To sitting subject no improve studied limited",
-    //     pathImage: "assets/onboarding/on2.png",
-    //     backgroundColor: Colors.white,
-    //   ),
-    // );
   }
 
   void onDonePress() {

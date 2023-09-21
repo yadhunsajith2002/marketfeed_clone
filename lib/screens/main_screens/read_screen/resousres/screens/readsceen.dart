@@ -7,7 +7,7 @@ import 'package:marketfeed_clone/screens/main_screens/read_screen/resousres/scre
 import 'package:marketfeed_clone/screens/main_screens/read_screen/resousres/screens/jargons.dart';
 import 'package:marketfeed_clone/screens/main_screens/read_screen/resousres/screens/market_screen.dart';
 
-class MarketScreen extends StatelessWidget {
+class ReadBottomTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -38,6 +38,14 @@ class MarketScreen extends StatelessWidget {
             width: 200,
           ),
           backgroundColor: Colors.white,
+          actions: [
+            IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.search,
+                  color: Colors.black,
+                ))
+          ],
         ),
         backgroundColor: Colors.black,
         body: NestedScrollView(

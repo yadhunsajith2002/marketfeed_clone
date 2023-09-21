@@ -10,6 +10,13 @@ class LoginContainer extends StatefulWidget {
 }
 
 class _LoginContainerState extends State<LoginContainer> {
+  void onTap() {}
+  String? _selectedCountryCode;
+  final List<String> _countryCodes = ['+91 ', '+23'];
+
+  bool? onsubmit;
+
+  bool onSubmit = true;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -45,9 +52,41 @@ class _LoginContainerState extends State<LoginContainer> {
           const SizedBox(
             height: 30,
           ),
-          const Row(
+          Row(
             children: [
-              PhoneWidget(),
+              Row(
+                children: [
+                  DropdownButton(
+                    value: _selectedCountryCode,
+                    items: _countryCodes.map((String value) {
+                      return DropdownMenuItem<String>(
+                          value: value,
+                          child: Text(
+                            value,
+                            style: const TextStyle(fontSize: 12.0),
+                          ));
+                    }).toList(),
+                    onChanged: (value) {
+                      setState(() {
+                        _selectedCountryCode = value;
+                      });
+                    },
+                  ),
+                  const SizedBox(
+                    width: 300,
+                    child: TextField(
+                      keyboardType: TextInputType.number,
+                      decoration: InputDecoration(
+                        contentPadding: EdgeInsets.all(12.0),
+                        hintText: 'Phone Number',
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey),
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              ),
             ],
           ),
           const SizedBox(
@@ -61,6 +100,7 @@ class _LoginContainerState extends State<LoginContainer> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15))),
               onPressed: () {
+                setState(() {});
                 Navigator.of(context).push(
                   MaterialPageRoute(builder: (context) => OTPpage()),
                 );
@@ -83,6 +123,8 @@ class PhoneWidget extends StatefulWidget {
 class _PhoneWidgetState extends State<PhoneWidget> {
   String? _selectedCountryCode;
   final List<String> _countryCodes = ['+91 ', '+23'];
+
+  bool? onsubmit;
 
   @override
   Widget build(BuildContext context) {

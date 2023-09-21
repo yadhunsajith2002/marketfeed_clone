@@ -13,13 +13,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: SplashScreen(),
-      // type == 0
-      //     ? IntroScreenDefault()
-      //     : type == 1
-      //         ? IntroScreenDefault()
-      //         : type == 2
-      //             ? IntroScreenDefault()
-      //             : IntroScreenDefault(),
       debugShowCheckedModeBanner: false,
     );
   }
