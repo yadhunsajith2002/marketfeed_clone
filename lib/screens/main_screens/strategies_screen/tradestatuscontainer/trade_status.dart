@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:marketfeed_clone/colors/colors.dart';
 
 class TradeStatus extends StatelessWidget {
   const TradeStatus({super.key});

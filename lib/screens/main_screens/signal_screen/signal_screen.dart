@@ -48,9 +48,6 @@ class _SignalScreenState extends State<SignalScreen> {
       ),
       body: ListView(
         children: [
-          SizedBox(
-            height: 10,
-          ),
           TopContainer(),
           SizedBox(
             height: 20,

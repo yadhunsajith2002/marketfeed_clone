@@ -17,7 +17,7 @@ class _TopContainerState extends State<TopContainer> {
             color: Colors.grey.shade300,
             borderRadius: BorderRadius.circular(20),
           ),
-          height: 200,
+          height: 210,
           width: 350,
           child: Column(
             children: [

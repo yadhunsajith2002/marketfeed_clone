@@ -93,8 +93,8 @@ class OTPContainer extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15))),
                 onPressed: () {
-                  Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (ctx) => ScreenHome()));
+                  Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (ctx) => ScreenHome()));
                 },
                 child: Text("SUBMIT")),
           ],

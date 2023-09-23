@@ -1,17 +1,17 @@
 // ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
+import 'package:marketfeed_clone/global_widgets/top_container.dart';
 
-import 'package:marketfeed_clone/screens/main_screens/read_screen/resousres/widgets/custom_indicator.dart';
 import 'package:marketfeed_clone/screens/main_screens/read_screen/resousres/screens/editorial.dart';
 import 'package:marketfeed_clone/screens/main_screens/read_screen/resousres/screens/jargons.dart';
 import 'package:marketfeed_clone/screens/main_screens/read_screen/resousres/screens/market_screen.dart';
 
-class MarketScreen extends StatelessWidget {
+class MarketBottomScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
+      length: 4,
       child: Scaffold(
         appBar: AppBar(
           leading: Builder(
@@ -38,37 +38,58 @@ class MarketScreen extends StatelessWidget {
             width: 200,
           ),
           backgroundColor: Colors.white,
+          actions: [
+            IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.search,
+                  color: Colors.black,
+                ))
+          ],
         ),
-        backgroundColor: Colors.black,
         body: NestedScrollView(
           headerSliverBuilder: (context, innerBoxIsScrolled) => [
             SliverAppBar(
-              toolbarHeight: 150,
+              leading: null,
+              flexibleSpace: TopContainer(),
+              toolbarHeight: 220,
+              backgroundColor: Colors.white,
+              elevation: 0,
+              floating: false,
+              snap: false,
+              pinned: false,
+            ),
+            SliverAppBar(
               backgroundColor: Colors.white,
               elevation: 0,
               floating: true,
               snap: true,
               pinned: true,
-              // title: ReadStatus(),
               bottom: TabBar(
                 isScrollable: true,
-                indicator: const CustomTabIndicator(),
+                indicatorWeight: 5,
+                indicatorSize: TabBarIndicatorSize.label,
+                labelStyle:
+                    TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                // indicator: CustomTabIndicator(indicatorHeight: 10,),
                 labelColor: Color(0xFF4266c7),
-                unselectedLabelColor: Colors.black,
+                unselectedLabelColor: Colors.grey.shade500,
                 tabs: const [
-                  Tab(text: 'Market'),
-                  Tab(text: 'Editorial'),
-                  Tab(text: 'Jargons'),
+                  Tab(text: 'Watchlist'),
+                  Tab(text: 'Indian Indices'),
+                  Tab(text: 'Global Indices '),
+                  Tab(text: 'Leaderboard'),
                 ],
               ),
             )
           ],
-          body: Container(
+          body: SizedBox(
             child: TabBarView(
               children: [
                 MarketTab(),
                 EditorialTab(),
-                JargonsTab(),
+                Jargontab(),
+                EditorialTab(),
               ],
             ),
           ),

@@ -7,6 +7,7 @@ import 'package:marketfeed_clone/global_widgets/top_container.dart';
 import 'package:marketfeed_clone/screens/main_screens/read_screen/resousres/screens/readsceen.dart';
 import 'package:marketfeed_clone/screens/main_screens/signal_screen/signal_screen.dart';
 import 'package:marketfeed_clone/screens/main_screens/strategies_screen/strategies_screen.dart';
+import 'package:marketfeed_clone/utilis/color_constant/color.dart';
 
 class ScreenHome extends StatefulWidget {
   const ScreenHome({super.key});
@@ -27,13 +28,13 @@ class _ScreenHomeState extends State<ScreenHome> {
     StrategieScreen(),
     ReadBottomTab(),
     SignalScreen(),
-    MarketScreen(),
+    MarketBottomScreen(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade400,
+      backgroundColor: ColorConstant.primaryColor,
       bottomNavigationBar: MyBottom(onTap: onTap, selectedIndex: _currentIndex),
       // drawer: Drawer(
       //   child: ListView(
