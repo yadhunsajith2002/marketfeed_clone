@@ -1,6 +1,7 @@
 import 'package:intro_slider/intro_slider.dart';
-import 'package:marketfeed_clone/screens/login_page/login_page.dart';
+
 import 'package:flutter/material.dart';
+import 'package:marketfeed_clone/screens/login_page/newlogin/phonenumauth.dart';
 
 class IntroScreenDefault extends StatefulWidget {
   const IntroScreenDefault({super.key});
@@ -34,7 +35,7 @@ class _IntroScreenDefaultState extends State<IntroScreenDefault> {
 
   void onDonePress() {
     Navigator.of(context)
-        .push(MaterialPageRoute(builder: (context) => LoginPage()));
+        .push(MaterialPageRoute(builder: (context) => RegisterScreen()));
   }
 
   @override
