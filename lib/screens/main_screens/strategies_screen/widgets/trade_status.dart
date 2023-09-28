@@ -12,8 +12,6 @@ class TradeStatus extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 15, left: 15, right: 15),
       child: Container(
-        height: 220,
-        width: 380,
         decoration: BoxDecoration(
             color: Colors.white, borderRadius: BorderRadius.circular(20)),
         child: Column(
@@ -22,9 +20,9 @@ class TradeStatus extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(12.0),
                   child: SizedBox(
-                    width: 250,
+                    // width: 250,
                     child: Text(
                       "1 Active Screen",
                       style: GoogleFonts.lato(
@@ -39,60 +37,50 @@ class TradeStatus extends StatelessWidget {
             Divider(
               thickness: 1,
             ),
-            Row(
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Text(
-                          "Smart Money",
-                          style: GoogleFonts.lato(
-                              fontSize: 20, fontWeight: FontWeight.bold),
-                        ),
-                        FractionalTranslation(
-                          translation: Offset(4, 0),
-                          child: CircleAvatar(
-                            backgroundImage: NetworkImage(
-                                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8Jdq413rxraV3qA1vYQXGCYBvCkNO3sL2gA&usqp=CAU"),
-                            radius: 22,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        SizedBox(
-                          width: 10,
-                        ),
-                        OutlinedButton(
-                          onPressed: () {},
-                          child: Text("options"),
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        OutlinedButton(
-                          onPressed: () {},
-                          child: Text("Weekly"),
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        OutlinedButton(
-                          onPressed: () {},
-                          child: Text("Medium Risk"),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ],
+            ListTile(
+              contentPadding: EdgeInsets.all(10),
+              title: Row(
+                children: [
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    "Smart Money",
+                    style: GoogleFonts.lato(
+                        fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+              subtitle: Row(
+                children: [
+                  SizedBox(
+                    width: 10,
+                  ),
+                  OutlinedButton(
+                    onPressed: () {},
+                    child: Text("options"),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  OutlinedButton(
+                    onPressed: () {},
+                    child: Text("Weekly"),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  OutlinedButton(
+                    onPressed: () {},
+                    child: Text("Medium Risk"),
+                  ),
+                ],
+              ),
+              trailing: CircleAvatar(
+                backgroundImage: NetworkImage(
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8Jdq413rxraV3qA1vYQXGCYBvCkNO3sL2gA&usqp=CAU"),
+                radius: 15,
+              ),
             ),
             SizedBox(
               height: 5,
@@ -102,7 +90,7 @@ class TradeStatus extends StatelessWidget {
               children: [
                 Container(
                   height: 60,
-                  width: 360,
+                  width: MediaQuery.of(context).size.width * 0.85,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color: Colors.grey.shade100),
@@ -143,7 +131,10 @@ class TradeStatus extends StatelessWidget {
                   ),
                 ),
               ],
-            )
+            ),
+            SizedBox(
+              height: 10,
+            ),
           ],
         ),
       ),

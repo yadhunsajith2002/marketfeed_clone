@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:marketfeed_clone/screens/home_screen/home_screen.dart';
-import 'package:marketfeed_clone/screens/login_page/newlogin/widgets/custombutton.dart';
+import 'package:marketfeed_clone/screens/login_page/widgets/custombutton.dart';
 
 import 'package:pinput/pinput.dart';
 
@@ -79,7 +79,7 @@ class _OtpScreenState extends State<OtpScreen> {
                     ),
                     const SizedBox(height: 25),
                     Text(
-                      "Didn't receive any code?",
+                      "Didn't receive any code? Resend in 27 seconds",
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.bold,

@@ -1,7 +1,7 @@
 import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:marketfeed_clone/screens/login_page/newlogin/otp_screen.dart';
-import 'package:marketfeed_clone/screens/login_page/newlogin/widgets/custombutton.dart';
+import 'package:marketfeed_clone/screens/login_page/otp_screen.dart';
+import 'package:marketfeed_clone/screens/login_page/widgets/custombutton.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -124,7 +124,21 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       ),
                     ),
                     SizedBox(height: 20),
-                    Text('send otp on whatsapp'),
+                    Row(
+                      // mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                          height: 20,
+                          width: 30,
+                        ),
+                        SizedBox(
+                          height: 15,
+                          width: 30,
+                          child: Image.asset("assets/png/download.jpeg"),
+                        ),
+                        Text('send OTP on Whatsapp'),
+                      ],
+                    ),
                     SizedBox(height: 20),
                     SizedBox(
                       width: double.infinity,

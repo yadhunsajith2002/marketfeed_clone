@@ -1,7 +1,7 @@
 import 'package:intro_slider/intro_slider.dart';
 
 import 'package:flutter/material.dart';
-import 'package:marketfeed_clone/screens/login_page/newlogin/phonenumauth.dart';
+import 'package:marketfeed_clone/screens/login_page/phonenumauth.dart';
 
 class IntroScreenDefault extends StatefulWidget {
   const IntroScreenDefault({super.key});

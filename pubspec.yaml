@@ -90,6 +90,9 @@ flutter:
     - assets\onboarding\boarding.jpg
     - assets\onboarding\boarding2.jpg
     - assets\unnamed.png
+    - assets\png\download.jpeg
+    - assets\images\images (1).jpeg
+    - assets\images\s25vqbus2h9bzpuf_1695475660.webp
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

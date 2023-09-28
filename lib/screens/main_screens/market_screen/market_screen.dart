@@ -2,10 +2,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:marketfeed_clone/global_widgets/top_container.dart';
+import 'package:marketfeed_clone/screens/main_screens/market_screen/screens/global%20indices/global_indices.dart';
+import 'package:marketfeed_clone/screens/main_screens/market_screen/screens/indian%20indices/indian_indices.dart';
+import 'package:marketfeed_clone/screens/main_screens/market_screen/screens/leader%20board/leaderboard.dart';
+import 'package:marketfeed_clone/screens/main_screens/market_screen/screens/watchlist/watchlist.dart';
 
-import 'package:marketfeed_clone/screens/main_screens/read_screen/resousres/screens/editorial.dart';
-import 'package:marketfeed_clone/screens/main_screens/read_screen/resousres/screens/jargons.dart';
-import 'package:marketfeed_clone/screens/main_screens/read_screen/resousres/screens/market_screen.dart';
+import 'package:marketfeed_clone/screens/main_screens/read_screen/screens/editorial.dart';
+import 'package:marketfeed_clone/screens/main_screens/read_screen/screens/jargons.dart';
+import 'package:marketfeed_clone/screens/main_screens/read_screen/screens/market_screen.dart';
 
 class MarketBottomScreen extends StatelessWidget {
   @override
@@ -86,10 +90,10 @@ class MarketBottomScreen extends StatelessWidget {
           body: SizedBox(
             child: TabBarView(
               children: [
-                MarketTab(),
-                EditorialTab(),
-                Jargontab(),
-                EditorialTab(),
+                WatchlistTab(),
+                IndianIndices(),
+                GlobalIndices(),
+                LeaderBoardTab()
               ],
             ),
           ),
