@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 import 'package:marketfeed_clone/screens/home_screen/bottom_navigation/bottom_navi.dart';
 import 'package:marketfeed_clone/screens/home_screen/drawer/drawer.dart';
+
 import 'package:marketfeed_clone/screens/main_screens/market_screen/market_screen.dart';
-import 'package:marketfeed_clone/global_widgets/top_container.dart';
+
 import 'package:marketfeed_clone/screens/main_screens/read_screen/screens/readsceen.dart';
 import 'package:marketfeed_clone/screens/main_screens/signal_screen/signal_screen.dart';
 import 'package:marketfeed_clone/screens/main_screens/strategies_screen/strategies_screen.dart';
@@ -37,6 +38,7 @@ class _ScreenHomeState extends State<ScreenHome> {
       backgroundColor: ColorConstant.primaryColor,
       bottomNavigationBar: MyBottom(onTap: onTap, selectedIndex: _currentIndex),
       body: myWidgets[_currentIndex],
+      drawer: MyDrawer(),
     );
   }
 }

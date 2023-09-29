@@ -18,20 +18,16 @@ class MarketBottomScreen extends StatelessWidget {
       length: 4,
       child: Scaffold(
         appBar: AppBar(
-          leading: Builder(
-            builder: (BuildContext context) {
-              return IconButton(
-                icon: const Icon(
-                  Icons.person,
-                  color: Colors.black,
-                  size: 25,
-                ),
-                onPressed: () {
-                  Scaffold.of(context).openDrawer();
-                },
-                tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
-              );
+          leading: IconButton(
+            icon: const Icon(
+              Icons.person,
+              color: Colors.black,
+              size: 25,
+            ),
+            onPressed: () {
+              Scaffold.of(context).openDrawer();
             },
+            tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
           ),
 
           iconTheme: IconThemeData(color: Colors.black),
@@ -42,14 +38,6 @@ class MarketBottomScreen extends StatelessWidget {
             width: 200,
           ),
           backgroundColor: Colors.white,
-          actions: [
-            IconButton(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.search,
-                  color: Colors.black,
-                ))
-          ],
         ),
         body: NestedScrollView(
           headerSliverBuilder: (context, innerBoxIsScrolled) => [

@@ -9,4 +9,7 @@ class StyleConstant {
   static TextStyle stylegreyclr = TextStyle(
     color: Colors.grey,
   );
+
+  static TextStyle drawertextstyle =
+      TextStyle(fontSize: 17, fontWeight: FontWeight.w400);
 }

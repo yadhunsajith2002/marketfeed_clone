@@ -11,19 +11,14 @@ class StrategieScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey.shade300,
       appBar: AppBar(
-        leading: Builder(
-          builder: (BuildContext context) {
-            return IconButton(
-              icon: const Icon(
-                Icons.person,
-                color: Colors.black,
-                size: 25, // Changing Drawer Icon Size
-              ),
-              onPressed: () {
-                Scaffold.of(context).openDrawer();
-              },
-              tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
-            );
+        leading: IconButton(
+          icon: const Icon(
+            Icons.person,
+            color: Colors.black,
+            size: 25, // Changing Drawer Icon Size
+          ),
+          onPressed: () {
+            Scaffold.of(context).openDrawer();
           },
         ),
 
@@ -41,7 +36,6 @@ class StrategieScreen extends StatelessWidget {
           Container(
             height: 400,
             width: double.infinity,
-            // color: Colors.grey,
             child: Column(
               children: [
                 Padding(

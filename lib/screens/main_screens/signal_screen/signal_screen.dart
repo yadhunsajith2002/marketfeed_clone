@@ -13,19 +13,14 @@ class _SignalScreenState extends State<SignalScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Builder(
-          builder: (BuildContext context) {
-            return IconButton(
-              icon: const Icon(
-                Icons.person,
-                color: Colors.black,
-                size: 25,
-              ),
-              onPressed: () {
-                Scaffold.of(context).openDrawer();
-              },
-              tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
-            );
+        leading: IconButton(
+          icon: const Icon(
+            Icons.person,
+            color: Colors.black,
+            size: 25,
+          ),
+          onPressed: () {
+            Scaffold.of(context).openDrawer();
           },
         ),
 

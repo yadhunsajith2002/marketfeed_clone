@@ -93,6 +93,8 @@ flutter:
     - assets\png\download.jpeg
     - assets\images\images (1).jpeg
     - assets\images\s25vqbus2h9bzpuf_1695475660.webp
+    - assets\avatar\vin-diesel-768x790.jpg
+    - assets\png\pngegg.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

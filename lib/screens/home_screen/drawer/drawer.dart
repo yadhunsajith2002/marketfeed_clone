@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marketfeed_clone/utilis/styles/textstyle.dart';
 
 class MyDrawer extends StatefulWidget {
   MyDrawer({super.key});
@@ -15,62 +16,175 @@ class _MyDrawerState extends State<MyDrawer> {
         padding: EdgeInsets.zero,
         children: [
           UserAccountsDrawerHeader(
-              decoration: BoxDecoration(),
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                opacity: 0.2,
+                fit: BoxFit.cover,
+                image: AssetImage(
+                  "assets/png/pngegg.png",
+                ),
+              )),
               currentAccountPicture: CircleAvatar(
-                backgroundImage: NetworkImage(
-                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReKC7hgv3p2XHExQUHWgv8oTYv2eUdAOWvbhMHKxdR_Ac4wMZUyg1yath1aFuedg1Giwg&usqp=CAU"),
+                backgroundImage:
+                    AssetImage("assets/avatar/vin-diesel-768x790.jpg"),
               ),
               accountName: Text(
-                "Yadhun",
-                style: TextStyle(color: Colors.black),
+                "Yadhun Sajith V V",
+                style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20),
                 selectionColor: Colors.white,
               ),
               accountEmail: Text(
-                "yadhun@gmail.com",
-                style: TextStyle(color: Colors.black),
+                "+9175486523",
+                style: TextStyle(color: Colors.grey),
               )),
-          // const DrawerHeader(
-          //   decoration: BoxDecoration(
-          //     color: Colors.blue,
-          //   ),
-          //   child: Text('Drawer Header'),
-          // ),
+          Divider(
+            thickness: 3,
+          ),
           ListTile(
-            title: const Text('Home'),
+            leading: Icon(
+              Icons.bookmark_border_outlined,
+              size: 30,
+            ),
+            title: Text(
+              'My Bookmarks',
+              style: StyleConstant.drawertextstyle,
+            ),
             onTap: () {
               Navigator.pop(context);
             },
           ),
           ListTile(
-            title: const Text('Business'),
+            leading: Icon(
+              Icons.open_in_browser_sharp,
+              size: 30,
+            ),
+            title: Text(
+              'Open Demat Account',
+              style: StyleConstant.drawertextstyle,
+            ),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+          Divider(
+            thickness: 2,
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.home_work_outlined,
+              size: 30,
+            ),
+            title: Text(
+              'About marketfeed',
+              style: StyleConstant.drawertextstyle,
+            ),
             onTap: () {
               Navigator.pop(context);
             },
           ),
           ListTile(
-            title: const Text('School'),
+            leading: Icon(
+              Icons.privacy_tip_outlined,
+              size: 30,
+            ),
+            title: Text(
+              'Privacy and Policy',
+              style: StyleConstant.drawertextstyle,
+            ),
             onTap: () {
               Navigator.pop(context);
             },
           ),
           ListTile(
-            title: const Text('Settings'),
+            leading: Icon(
+              Icons.info_outline,
+              size: 30,
+            ),
+            title: Text(
+              'Terms of use',
+              style: StyleConstant.drawertextstyle,
+            ),
             onTap: () {
               Navigator.pop(context);
             },
           ),
           ListTile(
-            title: const Text('Privacy And Policy'),
+            leading: Icon(
+              Icons.mail_outline_outlined,
+              size: 30,
+            ),
+            title: Text(
+              'Support',
+              style: StyleConstant.drawertextstyle,
+            ),
             onTap: () {
               Navigator.pop(context);
             },
           ),
           ListTile(
-            title: const Text('Logout'),
+            leading: Icon(
+              Icons.share,
+              size: 25,
+            ),
+            title: Text(
+              'Share With friends',
+              style: StyleConstant.drawertextstyle,
+            ),
             onTap: () {
               Navigator.pop(context);
             },
           ),
+          ListTile(
+            leading: Icon(
+              Icons.person_remove_outlined,
+              size: 25,
+            ),
+            title: Text(
+              'Delete Account',
+              style: StyleConstant.drawertextstyle,
+            ),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.logout,
+              size: 25,
+            ),
+            title: Text(
+              'Logout',
+              style: TextStyle(
+                  color: Colors.red, fontSize: 17, fontWeight: FontWeight.w400),
+            ),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+          Divider(
+            thickness: 1,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Text(
+                  "Made with 🖤 by marketfeed",
+                  textAlign: TextAlign.right,
+                  style: StyleConstant.stylegreyclr,
+                ),
+                Text(
+                  "Version 4.3.18",
+                  textAlign: TextAlign.right,
+                  style: StyleConstant.stylegreyclr,
+                )
+              ],
+            ),
+          )
         ],
       ),
     );

@@ -15,7 +15,16 @@ class ReadBottomTab extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           iconTheme: IconThemeData(color: Colors.black),
-          // leading: Icon(Icons.person),
+          leading: IconButton(
+            icon: const Icon(
+              Icons.person,
+              color: Colors.black,
+              size: 25, // Changing Drawer Icon Size
+            ),
+            onPressed: () {
+              Scaffold.of(context).openDrawer();
+            },
+          ),
           centerTitle: true,
           title: Image.asset(
             "assets/images/marketfeed home logo.png",

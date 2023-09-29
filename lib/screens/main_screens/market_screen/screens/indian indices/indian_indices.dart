@@ -11,13 +11,12 @@ class IndianIndices extends StatelessWidget {
     return ListView(
       children: [
         Container(
-          height: MediaQuery.of(context).size.height,
           color: Colors.grey.shade200,
           width: MediaQuery.of(context).size.width,
           child: Column(
             children: [
               SizedBox(
-                height: 10,
+                height: 15,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -55,27 +54,30 @@ class IndianIndices extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              Expanded(
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 13),
-                  child: ListView.separated(
-                    separatorBuilder: (context, index) {
-                      return SizedBox(
-                        height: 10,
-                      );
-                    },
-                    physics: NeverScrollableScrollPhysics(),
-                    shrinkWrap: true,
-                    itemCount: rates.length,
-                    itemBuilder: (context, index) => RefactbaleIndicesCard(
-                        marketname: "NIFTY BANK",
-                        country: false,
-                        color: Color.fromARGB(255, 185, 22, 10),
-                        rateVal: rates[index],
-                        percent: losspercent[index],
-                        profit: "-26500"),
-                  ),
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 13,
                 ),
+                child: ListView.separated(
+                  separatorBuilder: (context, index) {
+                    return SizedBox(
+                      height: 15,
+                    );
+                  },
+                  physics: NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: rates.length,
+                  itemBuilder: (context, index) => RefactbaleIndicesCard(
+                      marketname: "NIFTY BANK",
+                      country: false,
+                      color: Color.fromARGB(255, 185, 22, 10),
+                      rateVal: rates[index],
+                      percent: losspercent[index],
+                      profit: "-26500"),
+                ),
+              ),
+              SizedBox(
+                height: 10,
               )
             ],
           ),
@@ -127,7 +129,7 @@ class NiftySensex extends StatelessWidget {
               width: 70,
               decoration: BoxDecoration(
                   color: Color.fromARGB(255, 185, 22, 10),
-                  borderRadius: BorderRadius.circular(4)),
+                  borderRadius: BorderRadius.circular(6)),
               child: Center(
                 child: Text(
                   percentage,
@@ -138,7 +140,10 @@ class NiftySensex extends StatelessWidget {
             SizedBox(
               width: 10,
             ),
-            Text(loss)
+            Text(
+              loss,
+              style: TextStyle(color: Colors.red),
+            )
           ],
         ),
         Divider()

@@ -72,7 +72,7 @@ class RefactbaleIndicesCard extends StatelessWidget {
             height: 30,
             width: 70,
             decoration: BoxDecoration(
-                color: color, borderRadius: BorderRadius.circular(4)),
+                color: color, borderRadius: BorderRadius.circular(6)),
             child: Center(
               child: Text(
                 percent,

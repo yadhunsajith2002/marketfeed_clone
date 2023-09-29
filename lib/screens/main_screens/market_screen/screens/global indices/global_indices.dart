@@ -11,7 +11,6 @@ class GlobalIndices extends StatelessWidget {
     return ListView(
       children: [
         Container(
-          height: MediaQuery.of(context).size.height,
           color: Colors.grey.shade200,
           width: MediaQuery.of(context).size.width,
           child: Column(
@@ -43,27 +42,30 @@ class GlobalIndices extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              Expanded(
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 13),
-                  child: ListView.separated(
-                    separatorBuilder: (context, index) {
-                      return SizedBox(
-                        height: 10,
-                      );
-                    },
-                    physics: NeverScrollableScrollPhysics(),
-                    shrinkWrap: true,
-                    itemCount: rates.length,
-                    itemBuilder: (context, index) => RefactbaleIndicesCard(
-                        marketname: "DOW JONES",
-                        country: true,
-                        color: Colors.green,
-                        rateVal: rates[index],
-                        percent: gainpercent[index],
-                        profit: "+247.48"),
-                  ),
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 13,
                 ),
+                child: ListView.separated(
+                  separatorBuilder: (context, index) {
+                    return SizedBox(
+                      height: 15,
+                    );
+                  },
+                  physics: NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: rates.length,
+                  itemBuilder: (context, index) => RefactbaleIndicesCard(
+                      marketname: "DOW JONES",
+                      country: true,
+                      color: Colors.green,
+                      rateVal: rates[index],
+                      percent: gainpercent[index],
+                      profit: "+247.48"),
+                ),
+              ),
+              SizedBox(
+                height: 10,
               )
             ],
           ),
