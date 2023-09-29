@@ -28,36 +28,31 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  country_picker: ^2.0.21
+  cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
-
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
   get: ^4.6.5
   google_fonts: ^5.1.0
-  onboarding: ^3.1.0
-  introduction_screen: ^3.1.11
-  shared_preferences: ^2.2.1
-  intro_slider: ^4.2.1
   image_picker: ^1.0.4
+  intro_slider: ^4.2.1
+  introduction_screen: ^3.1.11
+  onboarding: ^3.1.0
   pinput: ^2.2.21
   provider: ^6.0.5
-  url_launcher: ^6.1.7
-  country_picker: ^2.0.21
+  shared_preferences: ^2.2.1
+  url_launcher: ^6.1.14
 
 dev_dependencies:
+  flutter_launcher_icons: "^0.13.1"
   flutter_test:
     sdk: flutter
-  flutter_launcher_icons: "^0.13.1"
 
 flutter_icons:
   android: "launcher_icon"
   ios: true
   image_path: "assets/unnamed.png"
-  min_sdk_android: 21 # android min sdk min:16, default 21  
-
+  min_sdk_android: 21 # android min sdk min:16, default 21
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -68,7 +63,6 @@ flutter_icons:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
-
 # The following section is specific to Flutter packages.
 flutter:
 
@@ -79,12 +73,8 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets\onboarding\on1.png
-    - assets\onboarding\on2.png
-    - assets\onboarding\on3.png
+
     - assets\images\WhatsApp Image 2023-08-29 at 19.25.02.jpg
-    - assets\onboarding\on4.png
-    - assets\onboarding\on5.png
     - assets\images\marketfeed home logo.png
     - assets\gif\loadinglogo.gif
     - assets\onboarding\boarding.jpg
@@ -92,16 +82,23 @@ flutter:
     - assets\unnamed.png
     - assets\png\download.jpeg
     - assets\images\images (1).jpeg
-    - assets\images\s25vqbus2h9bzpuf_1695475660.webp
     - assets\avatar\vin-diesel-768x790.jpg
     - assets\png\pngegg.png
-
+    - assets\images\news\download.jpeg
+    - assets\images\news\images.jpeg
+    - assets\images\news\maxresdefault.jpg
+    - assets\images\news\s25vqbus2h9bzpuf_1695475660.webp
+    - assets\images\news\shutterstock_1024257475-750x406.jpg
+    - assets\images\news\Stock-Market-2023.webp
+    - assets\background\watercolor-paint-background-holi-festival.jpg
+    - assets\background\vecteezy_3d-businessman-holding-folder-great-for-business-brochures_22484132_247
+      (1).png
+    - assets\background\demat.png
+   
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
-
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/assets-and-images/#from-packages
-
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
   # "family" key with the font family name, and a "fonts" key with a

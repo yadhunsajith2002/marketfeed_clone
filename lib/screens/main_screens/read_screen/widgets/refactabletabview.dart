@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
 class RefactbaleTabView extends StatelessWidget {
-  final String imagePath;
-  final publisherPhoto;
-  final publisherName;
-  final newsDescription;
+  final String image;
+  final avatar;
+  final name;
+  final newsdes;
 
   const RefactbaleTabView({
     super.key,
-    required this.imagePath,
-    required this.publisherPhoto,
-    required this.publisherName,
-    required this.newsDescription,
+    required this.image,
+    required this.avatar,
+    required this.name,
+    required this.newsdes,
   });
 
   @override
@@ -24,9 +24,9 @@ class RefactbaleTabView extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage(imagePath), fit: BoxFit.cover),
+                      image: AssetImage(image), fit: BoxFit.cover),
                   borderRadius: BorderRadius.circular(20)),
-              height: MediaQuery.of(context).size.height * 0.2,
+              height: MediaQuery.of(context).size.height * 0.25,
               // height: 150,
               // width: 350,
             ),
@@ -35,22 +35,22 @@ class RefactbaleTabView extends StatelessWidget {
             contentPadding: EdgeInsets.all(10),
             leading: CircleAvatar(
               radius: 15,
-              backgroundImage: AssetImage(publisherPhoto),
+              backgroundImage: AssetImage(avatar),
             ),
             title: Text(
-              publisherName,
+              name,
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             subtitle: SizedBox(
               width: 270,
               child: Text(
-                newsDescription,
+                newsdes,
                 style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
               ),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 25, top: 5, right: 20),
+            padding: const EdgeInsets.only(left: 25, right: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

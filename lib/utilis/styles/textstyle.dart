@@ -12,4 +12,7 @@ class StyleConstant {
 
   static TextStyle drawertextstyle =
       TextStyle(fontSize: 17, fontWeight: FontWeight.w400);
+
+  static TextStyle blacktextclr =
+      TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold);
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:marketfeed_clone/model/image_constant/database/databaseimages.dart';
 import 'package:marketfeed_clone/screens/main_screens/read_screen/widgets/refactabletabview.dart';
 
-class Jargontab extends StatelessWidget {
+class MarketTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(

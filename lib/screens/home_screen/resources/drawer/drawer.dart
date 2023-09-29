@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+import 'package:marketfeed_clone/screens/home_screen/resources/drawer/screens/bookmark.dart';
+import 'package:marketfeed_clone/screens/home_screen/resources/drawer/screens/demat_acc.dart';
+import 'package:marketfeed_clone/utilis/color_constant/color.dart';
 import 'package:marketfeed_clone/utilis/styles/textstyle.dart';
 
 class MyDrawer extends StatefulWidget {
@@ -24,9 +29,38 @@ class _MyDrawerState extends State<MyDrawer> {
                   "assets/png/pngegg.png",
                 ),
               )),
-              currentAccountPicture: CircleAvatar(
-                backgroundImage:
-                    AssetImage("assets/avatar/vin-diesel-768x790.jpg"),
+              currentAccountPicture: Container(
+                decoration: BoxDecoration(
+                    color: ColorConstant.textColor,
+                    borderRadius: BorderRadiusDirectional.circular(10)),
+                child: Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: ColorConstant.primaryColor,
+                        borderRadius: BorderRadiusDirectional.circular(10)),
+                    child: Stack(
+                      children: [
+                        Center(
+                            child: Text(
+                          "YD",
+                          style: StyleConstant.blacktextclr,
+                        )),
+                        Positioned(
+                            bottom: 5,
+                            right: 3,
+                            child: CircleAvatar(
+                              radius: 11,
+                              child: Center(
+                                  child: Icon(
+                                Icons.camera_alt_outlined,
+                                size: 15,
+                              )),
+                            ))
+                      ],
+                    ),
+                  ),
+                ),
               ),
               accountName: Text(
                 "Yadhun Sajith V V",
@@ -53,7 +87,9 @@ class _MyDrawerState extends State<MyDrawer> {
               style: StyleConstant.drawertextstyle,
             ),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => BookMarkScreen(),
+              ));
             },
           ),
           ListTile(
@@ -66,7 +102,9 @@ class _MyDrawerState extends State<MyDrawer> {
               style: StyleConstant.drawertextstyle,
             ),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => DematAccountScreen(),
+              ));
             },
           ),
           Divider(
@@ -81,8 +119,11 @@ class _MyDrawerState extends State<MyDrawer> {
               'About marketfeed',
               style: StyleConstant.drawertextstyle,
             ),
-            onTap: () {
-              Navigator.pop(context);
+            onTap: () async {
+              final Uri url = Uri.parse('https://www.marketfeed.com');
+              if (await canLaunchUrl(url)) {
+                await launchUrl(url);
+              }
             },
           ),
           ListTile(

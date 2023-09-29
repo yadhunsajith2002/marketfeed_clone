@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:marketfeed_clone/screens/home_screen/bottom_navigation/bottom_navi.dart';
-import 'package:marketfeed_clone/screens/home_screen/drawer/drawer.dart';
+import 'package:marketfeed_clone/screens/home_screen/resources/bottom_navigation/bottom_navi.dart';
+import 'package:marketfeed_clone/screens/home_screen/resources/drawer/drawer.dart';
 
 import 'package:marketfeed_clone/screens/main_screens/market_screen/market_screen.dart';
 

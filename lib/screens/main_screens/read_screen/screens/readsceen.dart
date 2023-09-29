@@ -5,7 +5,7 @@ import 'package:marketfeed_clone/global_widgets/top_container.dart';
 
 import 'package:marketfeed_clone/screens/main_screens/read_screen/screens/editorial.dart';
 import 'package:marketfeed_clone/screens/main_screens/read_screen/screens/jargons.dart';
-import 'package:marketfeed_clone/screens/main_screens/read_screen/screens/market_screen.dart';
+import 'package:marketfeed_clone/screens/main_screens/read_screen/screens/market.dart';
 
 class ReadBottomTab extends StatelessWidget {
   @override
