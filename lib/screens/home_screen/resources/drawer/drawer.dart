@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:marketfeed_clone/screens/home_screen/resources/drawer/screens/delete_acc.dart';
+import 'package:marketfeed_clone/screens/login_page/phonenumauth.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'package:marketfeed_clone/screens/home_screen/resources/drawer/screens/bookmark.dart';
@@ -14,6 +17,39 @@ class MyDrawer extends StatefulWidget {
 }
 
 class _MyDrawerState extends State<MyDrawer> {
+  Future logout(BuildContext context) async {
+    SharedPreferences sharedPref = await SharedPreferences.getInstance();
+    sharedPref.remove('username');
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text('EXIT'),
+          content: Text('Do you want to exit'),
+          actions: [
+            TextButton(
+              child: Text('Yes'),
+              onPressed: () {
+                Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => RegisterScreen(),
+                    ),
+                    (route) => false);
+              },
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: Text('No'),
+            )
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -43,7 +79,7 @@ class _MyDrawerState extends State<MyDrawer> {
                       children: [
                         Center(
                             child: Text(
-                          "YD",
+                          "YS",
                           style: StyleConstant.blacktextclr,
                         )),
                         Positioned(
@@ -127,31 +163,37 @@ class _MyDrawerState extends State<MyDrawer> {
             },
           ),
           ListTile(
-            leading: Icon(
-              Icons.privacy_tip_outlined,
-              size: 30,
-            ),
-            title: Text(
-              'Privacy and Policy',
-              style: StyleConstant.drawertextstyle,
-            ),
-            onTap: () {
-              Navigator.pop(context);
-            },
-          ),
+              leading: Icon(
+                Icons.privacy_tip_outlined,
+                size: 30,
+              ),
+              title: Text(
+                'Privacy and Policy',
+                style: StyleConstant.drawertextstyle,
+              ),
+              onTap: () async {
+                final Uri url =
+                    Uri.parse('https://payments.marketfeed.com/privacy-policy');
+                if (await canLaunchUrl(url)) {
+                  await launchUrl(url);
+                }
+              }),
           ListTile(
-            leading: Icon(
-              Icons.info_outline,
-              size: 30,
-            ),
-            title: Text(
-              'Terms of use',
-              style: StyleConstant.drawertextstyle,
-            ),
-            onTap: () {
-              Navigator.pop(context);
-            },
-          ),
+              leading: Icon(
+                Icons.info_outline,
+                size: 30,
+              ),
+              title: Text(
+                'Terms of use',
+                style: StyleConstant.drawertextstyle,
+              ),
+              onTap: () async {
+                final Uri url =
+                    Uri.parse('https://payments.marketfeed.com/terms-of-use');
+                if (await canLaunchUrl(url)) {
+                  await launchUrl(url);
+                }
+              }),
           ListTile(
             leading: Icon(
               Icons.mail_outline_outlined,
@@ -188,7 +230,9 @@ class _MyDrawerState extends State<MyDrawer> {
               style: StyleConstant.drawertextstyle,
             ),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => DeleteAccScreen(),
+              ));
             },
           ),
           ListTile(
@@ -203,6 +247,7 @@ class _MyDrawerState extends State<MyDrawer> {
             ),
             onTap: () {
               Navigator.pop(context);
+              logout(context);
             },
           ),
           Divider(
@@ -211,6 +256,7 @@ class _MyDrawerState extends State<MyDrawer> {
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: Column(
+              // mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Text(

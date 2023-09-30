@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:marketfeed_clone/screens/home_screen/resources/bottom_navigation/bottom_navi.dart';
-import 'package:marketfeed_clone/screens/home_screen/home_screen.dart';
 
 import 'package:marketfeed_clone/screens/splash_screen/spalsh_screen.dart';
 
@@ -12,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: ScreenHome(),
+      home: SplashScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

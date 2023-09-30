@@ -2,6 +2,7 @@ import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:marketfeed_clone/screens/login_page/otp_screen.dart';
 import 'package:marketfeed_clone/screens/login_page/widgets/custombutton.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -12,6 +13,20 @@ class RegisterScreen extends StatefulWidget {
 
 class _RegisterScreenState extends State<RegisterScreen> {
   final TextEditingController phoneController = TextEditingController();
+  String phonenumber = '9633670172';
+  Future chekLogin() async {
+    if (phoneController.text == phonenumber) {
+      SharedPreferences sharedPref = await SharedPreferences.getInstance();
+      sharedPref.setString('username', phoneController.text);
+
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => OtpScreen(),
+      ));
+    }
+    Navigator.of(context).push(MaterialPageRoute(
+      builder: (context) => OtpScreen(),
+    ));
+  }
 
   Country selectedCountry = Country(
     phoneCode: "91",
@@ -136,7 +151,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           width: 30,
                           child: Image.asset("assets/png/download.jpeg"),
                         ),
-                        Text('send OTP on Whatsapp'),
+                        Text('Send OTP on Whatsapp'),
                       ],
                     ),
                     SizedBox(height: 20),
@@ -146,10 +161,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       child: CustomButton(
                           text: "Login",
                           onPressed: () {
-                            Navigator.of(context)
-                                .pushReplacement(MaterialPageRoute(
-                              builder: (context) => OtpScreen(),
-                            ));
+                            chekLogin();
+                            // Navigator.of(context).pushAndRemoveUntil(
+                            //   MaterialPageRoute(
+                            //     builder: (context) => OtpScreen(),
+                            //   ),
+                            //   (route) => false,
+                            // );
                           }),
                     ),
                     SizedBox(height: 20),

@@ -94,10 +94,11 @@ class _OtpScreenState extends State<OtpScreen> {
                         text: "Verify",
                         onPressed: () {
                           Navigator.of(context).pushAndRemoveUntil(
-                              MaterialPageRoute(
-                                builder: (context) => ScreenHome(),
-                              ),
-                              (route) => false);
+                            MaterialPageRoute(
+                              builder: (context) => ScreenHome(),
+                            ),
+                            (route) => false,
+                          );
                         },
                       ),
                     ),

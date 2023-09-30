@@ -18,24 +18,24 @@ class _IntroScreenDefaultState extends State<IntroScreenDefault> {
     super.initState();
 
     listContentConfig.add(
-      const ContentConfig(
-        heightImage: 500,
-        pathImage: "assets/onboarding/boarding2.jpg",
+      ContentConfig(
+        centerWidget: Image.asset("assets/onboarding/boarding2.jpg"),
         backgroundColor: Colors.white,
       ),
     );
     listContentConfig.add(
-      const ContentConfig(
-        heightImage: 500,
-        pathImage: "assets/onboarding/boarding.jpg",
+      ContentConfig(
+        centerWidget: Image.asset("assets/onboarding/boarding2.jpg"),
         backgroundColor: Colors.white,
       ),
     );
   }
 
   void onDonePress() {
-    Navigator.of(context)
-        .push(MaterialPageRoute(builder: (context) => RegisterScreen()));
+    Navigator.of(context).pushAndRemoveUntil(
+      MaterialPageRoute(builder: (context) => RegisterScreen()),
+      (route) => false,
+    );
   }
 
   @override

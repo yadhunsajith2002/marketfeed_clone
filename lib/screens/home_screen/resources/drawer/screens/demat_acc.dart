@@ -15,7 +15,7 @@ class DematAccountScreen extends StatelessWidget {
                 fit: BoxFit.cover,
                 image: AssetImage(
                     "assets/background/watercolor-paint-background-holi-festival.jpg"))),
-        child: Column(
+        child: ListView(
           children: [
             SizedBox(
               height: 40,
@@ -78,6 +78,9 @@ class DematAccountScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10)),
               ),
             ),
+            SizedBox(
+              height: 50,
+            )
           ],
         ),
       ),
