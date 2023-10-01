@@ -77,8 +77,7 @@ class TradeStatus extends StatelessWidget {
                 ],
               ),
               trailing: CircleAvatar(
-                backgroundImage: NetworkImage(
-                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8Jdq413rxraV3qA1vYQXGCYBvCkNO3sL2gA&usqp=CAU"),
+                backgroundImage: AssetImage("assets/avatar/pngegg (4).png"),
                 radius: 15,
               ),
             ),

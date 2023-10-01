@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:marketfeed_clone/screens/home_screen/home_screen.dart';
 import 'package:marketfeed_clone/screens/intro_screen/intro.dart';
@@ -13,7 +12,7 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   String? username = '';
-  Future getemail() async {
+  Future getPhone() async {
     SharedPreferences sharedPref = await SharedPreferences.getInstance();
     setState(() {
       username = sharedPref.getString('username');
@@ -23,12 +22,12 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    getemail();
+    getPhone();
 
     Timer(
       const Duration(seconds: 3),
       () {
-        Navigator.of(context).push(
+        Navigator.of(context).pushReplacement(
           MaterialPageRoute(
             builder: (context) =>
                 username == null ? IntroScreenDefault() : ScreenHome(),

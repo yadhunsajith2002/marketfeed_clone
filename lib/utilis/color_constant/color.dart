@@ -8,4 +8,5 @@ class ColorConstant {
   static Color secondaryColor = Colors.grey.shade800;
   static Color lightColor = Colors.white60;
   static Color blackclr = Colors.black;
+  static Color buttonclr = Color.fromARGB(255, 17, 75, 119);
 }

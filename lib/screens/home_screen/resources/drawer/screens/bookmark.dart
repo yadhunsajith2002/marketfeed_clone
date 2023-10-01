@@ -24,36 +24,46 @@ class BookMarkScreen extends StatelessWidget {
           style: StyleConstant.blacktextclr,
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Spacer(),
-            Icon(
-              Icons.bookmarks_outlined,
-              size: 100,
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Text(
-              "You Have not bookmarked anything yet!",
-              style: StyleConstant.blacktextclr,
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Text(
-              "Start bookmarking your favourite articles and read it anytime or on-the-go",
-              style: TextStyle(color: Colors.grey, fontSize: 15),
-              textAlign: TextAlign.center,
-            ),
-            Spacer(),
-            Spacer(),
-          ],
-        ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Spacer(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Column(
+                children: [
+                  Icon(
+                    Icons.bookmarks_outlined,
+                    size: 100,
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    "You Have not bookmarked anything yet!",
+                    style: StyleConstant.blacktextclr,
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    child: Text(
+                      "Start bookmarking your favourite articles and read it anytime or on-the-go",
+                      style: TextStyle(color: Colors.grey, fontSize: 15),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ],
+              )
+            ],
+          ),
+          Spacer(),
+          Spacer(),
+        ],
       ),
     );
   }

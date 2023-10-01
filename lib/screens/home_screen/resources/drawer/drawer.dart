@@ -24,10 +24,10 @@ class _MyDrawerState extends State<MyDrawer> {
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: Text('EXIT'),
-          content: Text('Do you want to exit'),
+          title: Text('Exit'),
+          content: Text('Do you want to exit?'),
           actions: [
-            TextButton(
+            ElevatedButton(
               child: Text('Yes'),
               onPressed: () {
                 Navigator.pushAndRemoveUntil(
@@ -38,7 +38,7 @@ class _MyDrawerState extends State<MyDrawer> {
                     (route) => false);
               },
             ),
-            TextButton(
+            OutlinedButton(
               onPressed: () {
                 Navigator.of(context).pop();
               },

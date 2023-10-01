@@ -32,6 +32,7 @@ class StrategieScreen extends StatelessWidget {
         backgroundColor: Colors.white,
       ),
       body: ListView(
+        shrinkWrap: true,
         children: [
           Container(
             height: 400,

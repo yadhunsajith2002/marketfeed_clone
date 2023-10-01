@@ -2,18 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:marketfeed_clone/utilis/color_constant/color.dart';
 import 'package:marketfeed_clone/utilis/styles/textstyle.dart';
 
-class DeleteAccScreen extends StatelessWidget {
+class DeleteAccScreen extends StatefulWidget {
   const DeleteAccScreen({super.key});
 
   @override
+  State<DeleteAccScreen> createState() => _DeleteAccScreenState();
+}
+
+class _DeleteAccScreenState extends State<DeleteAccScreen> {
+  Color clr = ColorConstant.lowgreyclr;
+  Color btnclr = ColorConstant.primaryColor;
+  Color buttonclr = ColorConstant.buttonclr;
+  bool? ispressed;
+
+  @override
   Widget build(BuildContext context) {
-    // List<String> options = [
-    //   "I don't want to use marketfeed anymore",
-    //   "I'm using another account",
-    //   "Getting too many notifications",
-    //   "The app is not working properly",
-    //   "Other"
-    // ];
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -66,66 +69,74 @@ class DeleteAccScreen extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              Container(
-                decoration: BoxDecoration(
-                    color: ColorConstant.lowgreyclr,
-                    borderRadius: BorderRadius.circular(20)),
-                child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-                  child: Text("I don't want to use marketfeed anymore"),
+              InkWell(
+                onTap: () {},
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: clr, borderRadius: BorderRadius.circular(20)),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 30, vertical: 20),
+                    child: Text("I don't want to use marketfeed anymore"),
+                  ),
                 ),
               ),
               SizedBox(
                 height: 10,
               ),
-              Container(
-                decoration: BoxDecoration(
-                    color: ColorConstant.lowgreyclr,
-                    borderRadius: BorderRadius.circular(20)),
-                child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-                  child: Text("I'm using another account"),
+              InkWell(
+                onTap: () {},
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: clr, borderRadius: BorderRadius.circular(20)),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 30, vertical: 20),
+                    child: Text("I'm using another account"),
+                  ),
                 ),
               ),
               SizedBox(
                 height: 10,
               ),
-              Container(
-                decoration: BoxDecoration(
-                    color: ColorConstant.lowgreyclr,
-                    borderRadius: BorderRadius.circular(20)),
-                child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-                  child: Text("Getting too many notifications"),
+              InkWell(
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: clr, borderRadius: BorderRadius.circular(20)),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 30, vertical: 20),
+                    child: Text("Getting too many notifications"),
+                  ),
                 ),
               ),
               SizedBox(
                 height: 10,
               ),
-              Container(
-                decoration: BoxDecoration(
-                    color: ColorConstant.lowgreyclr,
-                    borderRadius: BorderRadius.circular(20)),
-                child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-                  child: Text("The app is not working properly"),
+              InkWell(
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: clr, borderRadius: BorderRadius.circular(20)),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 30, vertical: 20),
+                    child: Text("The app is not working properly"),
+                  ),
                 ),
               ),
               SizedBox(
                 height: 10,
               ),
-              Container(
-                decoration: BoxDecoration(
-                    color: ColorConstant.lowgreyclr,
-                    borderRadius: BorderRadius.circular(20)),
-                child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-                  child: Text("Other"),
+              InkWell(
+                onTap: () {},
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: clr, borderRadius: BorderRadius.circular(20)),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 30, vertical: 20),
+                    child: Text("Other"),
+                  ),
                 ),
               ),
               SizedBox(
@@ -134,17 +145,20 @@ class DeleteAccScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    height: 60,
-                    width: MediaQuery.of(context).size.width * 0.9,
-                    decoration: BoxDecoration(
-                        color: ColorConstant.primaryColor,
-                        borderRadius: BorderRadius.circular(15)),
-                    child: Center(
-                        child: Text(
-                      "Continue",
-                      style: StyleConstant.stylewhiteclr,
-                    )),
+                  InkWell(
+                    onTap: () {},
+                    child: Container(
+                      height: 60,
+                      width: MediaQuery.of(context).size.width * 0.9,
+                      decoration: BoxDecoration(
+                          color: btnclr,
+                          borderRadius: BorderRadius.circular(15)),
+                      child: Center(
+                          child: Text(
+                        "Continue",
+                        style: StyleConstant.stylewhiteclr,
+                      )),
+                    ),
                   ),
                 ],
               ),
