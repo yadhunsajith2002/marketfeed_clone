@@ -50,7 +50,7 @@ class _SignalScreenState extends State<SignalScreen> {
           Container(
             height: 1000,
             width: double.infinity,
-            color: Colors.grey.shade300,
+            color: Colors.grey.shade200,
             child: Column(
               children: [
                 Padding(

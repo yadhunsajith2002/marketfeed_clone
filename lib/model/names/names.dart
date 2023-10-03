@@ -1,10 +1,11 @@
 class Names {
   static List<String> names = [
-    "Emenalo",
-    "ozyvaka",
-    "Joeleno",
-    "Cyindria",
-    "Add profile"
+    "Smart Money",
+    "Piggy Bank Swift",
+    "Piggy bank Flash",
+    "Smart Money Swift",
+    "Big Buck",
+    "Piggy Bank"
   ];
 
   static List<String> topSearch = [

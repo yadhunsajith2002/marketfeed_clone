@@ -87,4 +87,13 @@ class DataBaseImages {
           'Indias Inflation Drops. US CPI Tonight - Pre Market Analysis',
     },
   ];
+
+  static List<String> avatarimages = [
+    "assets/avatar/avatar1.jpg",
+    "assets/avatar/avatar2.jpg",
+    "assets/avatar/avatar3.png",
+    "assets/avatar/avtar4.png",
+    "assets/avatar/avtar5.png",
+    "assets/avatar/avtar6.png",
+  ];
 }

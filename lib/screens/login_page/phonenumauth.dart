@@ -43,11 +43,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
   @override
   Widget build(BuildContext context) {
-    phoneController.selection = TextSelection.fromPosition(
-      TextPosition(
-        offset: phoneController.text.length,
-      ),
-    );
+    // phoneController.selection = TextSelection.fromPosition(
+    //   TextPosition(
+    //     offset: phoneController.text.length,
+    //   ),
+    // );
     return Scaffold(
       body: SafeArea(
         child: ListView(
@@ -66,8 +66,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    const SizedBox(height: 10),
-                    const SizedBox(height: 20),
+                    SizedBox(height: 10),
+                    SizedBox(height: 20),
                     TextFormField(
                       cursorColor: Colors.purple,
                       controller: phoneController,
@@ -96,7 +96,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           borderSide: const BorderSide(color: Colors.black12),
                         ),
                         prefixIcon: Container(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(12.0),
                           child: InkWell(
                             onTap: () {
                               showCountryPicker(
@@ -140,16 +140,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                     SizedBox(height: 20),
                     Row(
-                      // mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         SizedBox(
                           height: 20,
                           width: 30,
                         ),
                         SizedBox(
-                          height: 15,
+                          height: 20,
                           width: 30,
-                          child: Image.asset("assets/png/download.jpeg"),
+                          child: Image.asset("assets/png/pngwing.com (20).png"),
                         ),
                         Text('Send OTP on Whatsapp'),
                       ],
@@ -162,12 +161,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           text: "Login",
                           onPressed: () {
                             chekLogin();
-                            // Navigator.of(context).pushAndRemoveUntil(
-                            //   MaterialPageRoute(
-                            //     builder: (context) => OtpScreen(),
-                            //   ),
-                            //   (route) => false,
-                            // );
                           }),
                     ),
                     SizedBox(height: 20),

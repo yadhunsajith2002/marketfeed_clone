@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:marketfeed_clone/model/image_constant/database/databaseimages.dart';
+import 'package:marketfeed_clone/model/names/names.dart';
+import 'package:marketfeed_clone/screens/main_screens/read_screen/readsceen.dart';
+import 'package:marketfeed_clone/screens/main_screens/strategies_screen/resources/Details/details_screen.dart';
 
 import 'package:marketfeed_clone/screens/main_screens/strategies_screen/widgets/trade_status.dart';
+import 'package:marketfeed_clone/utilis/color_constant/color.dart';
 
 class StrategieScreen extends StatelessWidget {
   const StrategieScreen({super.key});
@@ -9,21 +14,19 @@ class StrategieScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade300,
+      backgroundColor: ColorConstant.primaryColor,
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(
             Icons.person,
             color: Colors.black,
-            size: 25, // Changing Drawer Icon Size
+            size: 25,
           ),
           onPressed: () {
             Scaffold.of(context).openDrawer();
           },
         ),
-
         iconTheme: IconThemeData(color: Colors.black),
-        // leading: Icon(Icons.person),
         centerTitle: true,
         title: Image.asset(
           "assets/images/marketfeed home logo.png",
@@ -32,10 +35,9 @@ class StrategieScreen extends StatelessWidget {
         backgroundColor: Colors.white,
       ),
       body: ListView(
-        shrinkWrap: true,
         children: [
           Container(
-            height: 400,
+            height: MediaQuery.of(context).size.height * 0.5,
             width: double.infinity,
             child: Column(
               children: [
@@ -121,7 +123,7 @@ class StrategieScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text(
-                    "Follow Top Strategies",
+                    "Follow Top Strategies 🚀",
                     style: GoogleFonts.lato(
                         fontSize: 24, fontWeight: FontWeight.bold),
                   ),
@@ -135,10 +137,17 @@ class StrategieScreen extends StatelessWidget {
               ),
             ),
           ),
-          TradeStatus(),
-          TradeStatus(),
-          TradeStatus(),
-          TradeStatus(),
+          ListView.builder(
+            itemCount: DataBaseImages.avatarimages.length,
+            primary: false,
+            shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
+            itemBuilder: (context, index) => TradeStatus(
+              avatar: DataBaseImages.avatarimages[index],
+              head: Names.names[index],
+              onTap: () {},
+            ),
+          ),
           SizedBox(
             height: 20,
           )

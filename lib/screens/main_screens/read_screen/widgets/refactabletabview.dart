@@ -27,8 +27,6 @@ class RefactbaleTabView extends StatelessWidget {
                       image: AssetImage(image), fit: BoxFit.cover),
                   borderRadius: BorderRadius.circular(20)),
               height: MediaQuery.of(context).size.height * 0.25,
-              // height: 150,
-              // width: 350,
             ),
           ),
           ListTile(

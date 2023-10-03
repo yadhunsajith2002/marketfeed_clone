@@ -80,7 +80,7 @@ flutter:
     - assets\onboarding\boarding.jpg
     - assets\onboarding\boarding2.jpg
     - assets\unnamed.png
-    - assets\png\download.jpeg
+    - assets\png\pngwing.com (20).png
     - assets\images\images (1).jpeg
     - assets\avatar\vin-diesel-768x790.jpg
     - assets\png\pngegg.png
@@ -94,7 +94,13 @@ flutter:
     - assets\background\vecteezy_3d-businessman-holding-folder-great-for-business-brochures_22484132_247
       (1).png
     - assets\background\demat.png
-    - assets\avatar\pngegg (4).png
+    
+    - assets\avatar\avatar1.jpg
+    - assets\avatar\avatar2.jpg
+    - assets\avatar\avatar3.png
+    - assets\avatar\avtar4.png
+    - assets\avatar\avtar5.png
+    - assets\avatar\avtar6.png
    
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

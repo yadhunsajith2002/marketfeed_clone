@@ -66,13 +66,26 @@ class _TopContainerState extends State<TopContainer> {
                         style: TextStyle(fontWeight: FontWeight.bold),
                       )),
                   OutlinedButton(
-                      onPressed: () {},
-                      child: Text(
-                        'Contact Us',
-                        style: TextStyle(
-                            color: Colors.blue.shade700,
-                            fontWeight: FontWeight.bold),
-                      )),
+                    onPressed: () {},
+                    child: Row(
+                      children: [
+                        Image.asset(
+                          "assets/png/pngwing.com (20).png",
+                          height: 20,
+                          width: 20,
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Text(
+                          'Contact Us',
+                          style: TextStyle(
+                              color: Colors.blue.shade700,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                  ),
                   SizedBox(
                     width: 60,
                   )

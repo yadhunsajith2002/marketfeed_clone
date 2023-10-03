@@ -203,9 +203,7 @@ class _MyDrawerState extends State<MyDrawer> {
               'Support',
               style: StyleConstant.drawertextstyle,
             ),
-            onTap: () {
-              Navigator.pop(context);
-            },
+            onTap: () {},
           ),
           ListTile(
             leading: Icon(
@@ -216,9 +214,7 @@ class _MyDrawerState extends State<MyDrawer> {
               'Share With friends',
               style: StyleConstant.drawertextstyle,
             ),
-            onTap: () {
-              Navigator.pop(context);
-            },
+            onTap: () {},
           ),
           ListTile(
             leading: Icon(
